@@ -9,13 +9,20 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c 
+ * @brief main file for week 1 assignment
+ *  
+ * A simple C programming example that exhibits a handful of basicprogramming
+ * features to show how to calculate some statistics on some set of numbers 
+ * and print them on console :
+ * 	-mean
+ *	-median
+ *	-maximum
+ * 	-minimum
+ * 	-sorting (in decreasing order)
  *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Harsh Singhal
+ * @date 2017-09-27
  *
  */
 
@@ -40,4 +47,24 @@ void main() {
 
 }
 
-/* Add other Implementation File Code Here */
+void print_statistics(int minimum, int maximum, int mean, int median){
+}
+
+void print_array(unsigned char *array, int length){
+}
+
+unsigned char find_median(unsigned char *array, int length){
+}
+
+unsigned char find_mean(unsigned char *array, int length){
+}
+
+unsigned char find_maximum(unsigned char *array, int length){
+}
+
+unsigned char find_minimum(unsigned char *array, int length){
+}
+
+void sort_array(unsigned char *array, int length){
+}
+
