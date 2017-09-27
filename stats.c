@@ -52,6 +52,10 @@ void main() {
   maximum = find_maximum(test, SIZE);
     
   minimum = find_minimum(test, SIZE);
+
+  mean = find_mean(test, SIZE);
+   
+  median = find_median(test,SIZE);
   
   print_statistics(minimum,maximum,mean,median);
 
@@ -80,10 +84,51 @@ void print_array(unsigned char *array, int length){
 
 
 unsigned char find_median(unsigned char *array, int length){
+  int a;
+  int b;
+  int c;
+  int median;
+  
+  for(int i = 0; i < length; i++){
+    for(int j = i+1; j < length; j++){
+      if(array[i] < array[j]){
+        a = array[i];
+        array[i] = array[j];
+        array[j] = a;
+      }
+    }
+  }  
+  
+  if((length % 2) == 1){
+    b = (length / 2);
+    median = array[b]; 
+  }
+
+  if((length % 2) == 0){
+    c = ((length / 2) - 1);
+    b = (length / 2);
+    median = ((array[b] + array[c]) / 2);
+  }
+  
+  return(median);
 }
 
-
 unsigned char find_mean(unsigned char *array, int length){
+  int sum = 0;
+ 
+  if(array == NULL){
+    return 0;
+  }
+  
+  if(length <= 0){				//to prevent invalid math division
+    length = 1;
+  }
+  
+  for(int i = 0; i < length; i++){
+   sum = sum + array [i];
+  }
+
+  return(sum/length);
 }
 
 
