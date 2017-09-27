@@ -46,8 +46,11 @@ void main() {
   int mean;
   int median;
   
-  printf("The given array is : \n");
-  print_array(test, SIZE);  
+  printf("The GIVEN Array is : \n");
+  print_array(test, SIZE); 
+
+  printf("The SORTED Array (in descending order) is : \n");
+  sort_array(test,SIZE); 
 
   maximum = find_maximum(test, SIZE);
     
@@ -162,5 +165,18 @@ unsigned char find_minimum(unsigned char *array, int length){
 
 
 void sort_array(unsigned char *array, int length){
+  int a;
+  
+  for(int i = 0; i < length; i++){
+    for(int j = i+1; j < length; j++){
+      if(array[i] < array[j]){
+        a = array[i];
+        array[i] = array[j];
+        array[j] = a;
+      }
+    }
+  }  
+  
+  print_array(array,length);
+  printf("\n");
 }
-
