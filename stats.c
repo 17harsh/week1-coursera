@@ -41,6 +41,16 @@ void main() {
                               200, 122, 150, 90,   92,  87, 177, 244,
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
+  int maximum;
+  int minimum;
+  int mean;
+  int median;
+  
+  printf("The given array is : \n");
+  print_array(test, SIZE);  
+  
+  print_statistics(minimum,maximum,mean,median);
+
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
@@ -48,9 +58,18 @@ void main() {
 }
 
 void print_statistics(int minimum, int maximum, int mean, int median){
+  printf("The statistical analysis of the data give the following results :\n\n");
+  printf("The minimum element in the data is : %d \n",minimum);
+  printf("The maximum element in the data is : %d \n",maximum);
+  printf("The mean of the data is : %d \n",mean);
+  printf("The median of the data is : %d \n",median);
 }
 
 void print_array(unsigned char *array, int length){
+  for(int i = 0; i < length; i++) {
+    printf("%d ", array[i]);
+  }
+  printf("\n\n");
 }
 
 unsigned char find_median(unsigned char *array, int length){
